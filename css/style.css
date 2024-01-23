@@ -1,0 +1,117 @@
+:root {
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.show {
+    display: none;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--Cream);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 600px;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card img {
+    max-width: 50%;
+}
+
+.card .text {
+    background-color: var(--White);
+    padding: 30px;
+}
+.card .text .title {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 12px;
+    color: var(--Dark-grayish-blue);
+}
+
+.card .text h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Fraunces', serif;
+    line-height: 1;
+}
+.card .text h1 + p {
+    color: var(--Dark-grayish-blue);
+    line-height: 1.7;
+    font-size: 14px;
+    margin-bottom: 22px;
+}
+.card .text .price {
+    display: flex;
+    align-items: center;
+    
+}
+.card .text .price span:nth-child(1) {
+    color: var(--Dark-cyan);
+    font-family: 'Fraunces', serif;
+    font-size: 34px;
+}
+.card .text .price span:nth-child(2) {
+    color: var(--Dark-grayish-blue);
+    font-size: 14px;
+    margin-left: 12px;
+}
+
+.card .text button {
+    margin-top: 20px;
+    border: none;
+    background-color: var(--Dark-cyan);
+    width: 100%;
+    padding: 16px;
+    color: var(--White);
+    border-radius: 8px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    transition-duration: 0.3s;
+}
+.card .text button:hover {
+    background-color: hsl(156, 42%, 18%);
+}
+.card .text button img {
+    margin-right: 12px;
+}
+
+@media (max-width: 400px) {
+    .card {
+        flex-direction: column;
+        width: 94%;
+    }
+    .card img {
+        max-width: 100%;
+    }
+    .hide {
+        display: none;
+    }
+    .show {
+        display: block;
+    }
+
+}
